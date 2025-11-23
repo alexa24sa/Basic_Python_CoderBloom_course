@@ -22,9 +22,12 @@ La hora actual son las 10, al pasar 5 horas serán las 3.
 def horas(t, h):
     t = t + h 
     hora = t % 12
-    
-    print(hora)
+    if t % 12 == 0:
+        print('12')
+    else:
+        print(hora)
     
 t, h = map(int, input().split())
 horas(t, h)
+    
     
