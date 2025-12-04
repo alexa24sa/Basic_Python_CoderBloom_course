@@ -36,10 +36,13 @@ import math
 
 g, m = map(int, input().split())
 
+# Si m no es múltiplo de g, es imposible que existan a y b
 if m % g != 0:
     print(-1)
 else:
-    k = m // g
+    # El par (g, m) siempre cumple gcd = g y lcm = m
     a = g
-    b = g * k
+    b = m
+    # (opcional) comprobación de seguridad:
+    # assert math.gcd(a, b) == g and (a * b) // math.gcd(a, b) == m
     print(a, b)
