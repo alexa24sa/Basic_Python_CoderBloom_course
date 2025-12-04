@@ -53,11 +53,17 @@ tesoros = 0
 
 for i in range(N):
     for j in range(M):
+        if mazmorra[i][j] == 1:
+            enemigos += 1
+        elif mazmorra[i][j] == 2:
+            tesoros += 1
+            
         # TODO: si la celda es 1, aumenta enemigos
         # TODO: si la celda es 2, aumenta tesoros
         pass
 
 # 4) Imprimir primera línea: total de enemigos y total de tesoros
+print(f"{enemigos} {tesoros}")
 # TODO: imprime enemigos y tesoros en una sola línea separados por espacio
 
 
@@ -69,10 +75,13 @@ valor = mazmorra[F][C]
 
 if valor == 1:
     # TODO: imprimir exactamente "¡Finn se enfrenta a un enemigo!"
+    print("¡Finn se enfrenta a un enemigo!")
     pass
 elif valor == 2:
     # TODO: imprimir exactamente "¡Jake encontró un tesoro!"
+    print("¡Jake encontró un tesoro!")
     pass
 else:
     # TODO: imprimir exactamente "La sala está vacía..."
+    print("La sala está vacía...")
     pass
